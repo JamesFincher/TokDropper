@@ -1,0 +1,3 @@
+type MailingError = {
+  message?: string;
+};
