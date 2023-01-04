@@ -5,13 +5,13 @@ const emailSchema = z.string().email();
 
 const MailingListForm: React.FC = () => {
     const [email, setEmail] = useState("");
-    const [error, setError] = useState<string | null>("");
+    const [error, setError] = useState < unknown | string>("");
 
   const handleChange = (e: FormEvent<HTMLInputElement>) => {
     setEmail(e.currentTarget.value);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     //validate email

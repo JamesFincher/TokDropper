@@ -3,9 +3,8 @@ import { signIn, signOut, useSession } from "next-auth/react";
 
 import { trpc } from "../utils/trpc";
 
-type Props = {};
 
-const admin = (props: Props) => {
+const Admin: React.FC = () => {
   const { data: sessionData } = useSession();
     const { data: secretMessage } = trpc.auth.getSecretMessage.useQuery(
     undefined, // no input
@@ -19,7 +18,7 @@ const admin = (props: Props) => {
         <div className="max-w-md">
           <h1 className="text-5xl font-bold">Admin Login</h1>
           <p className="py-6">
-            {sessionData ? "You are logged in as " + sessionData.user.name : "Please login below to access the admin dashboard."}
+            {sessionData ? "You are logged in as " + sessionData?.user?.name : "Please login below to access the admin dashboard."}
           </p>
            
           <button className="btn-primary btn"
@@ -34,4 +33,4 @@ const admin = (props: Props) => {
   );
 };
 
-export default admin;
+export default Admin;
