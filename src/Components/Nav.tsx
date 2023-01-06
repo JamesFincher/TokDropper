@@ -3,7 +3,7 @@ import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 
 const Nav = () => {
-    const { data: sessionData } = useSession();
+  const { data: sessionData } = useSession();
 
   return (
     <div className="navbar bg-base-100">
@@ -64,7 +64,11 @@ const Nav = () => {
               <a>Settings</a>
             </li>
             <li>
-              {sessionData ? <Link href="/auth/logout">Logout</Link> : <Link href="/auth/login">Login</Link>}
+              {sessionData ? (
+                <Link href="/auth/logout">Logout</Link>
+              ) : (
+                <Link href="/auth/login">Login</Link>
+              )}
             </li>
           </ul>
         </div>

@@ -1,11 +1,7 @@
-import React from 'react'
-
+import React from "react";
 
 const Checkpoint = () => {
+  return <div>checkpoint</div>;
+};
 
-  return (
-    <div>checkpoint</div>
-  )
-}
-
-export default Checkpoint
+export default Checkpoint;

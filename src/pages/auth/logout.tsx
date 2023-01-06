@@ -4,10 +4,9 @@ import React from "react";
 import { useSession, signOut } from "next-auth/react";
 
 const Logout = () => {
-
-    signOut({
-        callbackUrl: "/",
-    });
+  signOut({
+    callbackUrl: "/",
+  });
 
   return <div>Logged out. Redirecting to home page...</div>;
 };

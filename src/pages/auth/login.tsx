@@ -1,6 +1,5 @@
-import React from 'react'
+import React from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
-
 
 const Login = () => {
   const { data: sessionData } = useSession();
@@ -9,9 +8,7 @@ const Login = () => {
   } else {
     signIn("discord", { callbackUrl: "/dash/dashboard" });
   }
-  return (
-    <div>login</div>
-  )
-}
+  return <div>login</div>;
+};
 
-export default Login
+export default Login;
