@@ -47,7 +47,7 @@ const Nav = () => {
         <div className="dropdown-end dropdown">
           <label tabIndex={0} className="btn-ghost btn-circle avatar btn">
             <div className="w-10 rounded-full">
-              <img src="https://placeimg.com/80/80/people" />
+              {sessionData ? (<img src={sessionData?.user?.image} />) : (<img src="https://i.imgur.com/6uY7Y2y.png" />)}
             </div>
           </label>
           <ul
